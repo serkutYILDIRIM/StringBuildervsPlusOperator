@@ -1,13 +1,16 @@
-﻿using StringBuildervsPlusOperator;
+﻿using BenchmarkDotNet.Running;
+using StringBuildervsPlusOperator;
 
 
 
-var operation = new StringConcatenationOperations();
+//var operation = new StringConcatenationOperations();
 
-Console.WriteLine("String Builder Result: ");
-Console.WriteLine(operation.StringConcatenationUsingStringBuilder());
-Console.WriteLine("Plus Operator Result: ");
-Console.WriteLine(operation.StringConcatenationUsingPlusOperator());
+//Console.WriteLine("String Builder Result: ");
+//Console.WriteLine(operation.StringConcatenationUsingStringBuilder());
+//Console.WriteLine("Plus Operator Result: ");
+//Console.WriteLine(operation.StringConcatenationUsingPlusOperator());
 
-Console.Read();
+//Console.Read();
+
+var summary = BenchmarkRunner.Run<StringConcatenationOperations>();
 
